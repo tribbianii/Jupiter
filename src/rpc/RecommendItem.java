@@ -14,16 +14,16 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 /**
- * Servlet implementation class SearchItem
+ * Servlet implementation class RecommendItem
  */
-@WebServlet("/search")
-public class SearchItem extends HttpServlet {
+@WebServlet("/recommendItem")
+public class RecommendItem extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SearchItem() {
+    public RecommendItem() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -36,8 +36,8 @@ public class SearchItem extends HttpServlet {
 		
 		JSONArray array = new JSONArray();
 		try {
-			array.put(new JSONObject().put("username", "abcd"));
-			array.put(new JSONObject().put("username", "1234"));
+			array.put(new JSONObject().put("username", "abcd").put("address", "san francisco").put("time", "01/01/2017"));
+			array.put(new JSONObject().put("username", "1234").put("address", "san jose").put("time", "01/02/2017"));
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
